@@ -114,16 +114,16 @@ module.exports = async (context, account = new TagoAccount(), config_dev = new T
   }
 
   if (!pole_name) {
-    validate('You need to enter the Pole Name.');
+    validate('You need to enter the Pole Name.', 'danger');
     throw '<New Pole> Missing GPS EUI and Pole ID';
   } else if (location.length < 2 || location.length > 2) {
-    validate('Wrong latitude and longitude. Please enter Latitude;Longitude');
+    validate('Wrong latitude and longitude. Please enter Latitude;Longitude', 'danger');
     throw '<New Pole> Wrong Latitude Longitude';
   } else if (Number(location[1]) > 180 || Number(location[1]) < -180) {
-    validate('Wrong longitude. Value must be -180 < n < 180.');
+    validate('Wrong longitude. Value must be -180 < n < 180.', 'danger');
     throw '<New Pole> Wrong  Longitude';
   } else if (Number(location[0]) > 90 || Number(location[0]) < -90) {
-    validate('Wrong latitude. Value must be -90 < n < 90.');
+    validate('Wrong latitude. Value must be -90 < n < 90.', 'danger');
     throw '<New Pole> Wrong Latitude ';
   }
 

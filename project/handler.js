@@ -42,4 +42,4 @@ async function startAnalysis(context, scope) {
   });
 }
 
-module.exports = new TagoAnalysis(startAnalysis, 'your analysis token');
+module.exports = new TagoAnalysis(startAnalysis, 'a97fe159-11c0-4fc7-bc5a-3287cfcc1dc8');
